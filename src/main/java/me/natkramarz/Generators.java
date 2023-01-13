@@ -1,4 +1,4 @@
-package org.example;
+package me.natkramarz;
 
 class Generators<T extends StringGenerator, E extends StringGenerator, X extends StringGenerator, Y extends StringGenerator, Z extends StringGenerator> {
 

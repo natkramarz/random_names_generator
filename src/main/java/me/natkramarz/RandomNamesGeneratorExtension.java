@@ -1,9 +1,7 @@
-package org.example;
+package me.natkramarz;
 
-import org.example.exception.IncorrectNameLengthException;
+import me.natkramarz.exception.IncorrectNameLengthException;
 import org.junit.jupiter.api.extension.*;
-
-import java.lang.reflect.Field;
 
 public class RandomNamesGeneratorExtension implements ParameterResolver, TestInstancePostProcessor {
     @Override

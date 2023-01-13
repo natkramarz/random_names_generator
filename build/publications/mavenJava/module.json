@@ -3,7 +3,7 @@
   "component": {
     "group": "me.natkramarz",
     "module": "random_names_generator",
-    "version": "1.8",
+    "version": "1.9",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "random_names_generator-1.8.jar",
-          "url": "random_names_generator-1.8.jar",
-          "size": 803282,
-          "sha512": "7c4110b01aa0745e55377f60e1faaf26280fc6ea606d34fcabba8db559d6c7ed93c2537314209cae54d96e48ab67cd6d1d2d1f2a1dcf2211290be04b8e14fe31",
-          "sha256": "ce49ebcf094439136e0879de4f1ec0d837fae498b590f9f017404f391b717814",
-          "sha1": "59e8ca7e00aa493a063b317899d1cb2e473036ba",
-          "md5": "68e758f155f3c89cc39b9f0f80207980"
+          "name": "random_names_generator-1.9.jar",
+          "url": "random_names_generator-1.9.jar",
+          "size": 803351,
+          "sha512": "7fe07f19cae3c99a535c33b475a0214bd074c518c497905f680a23b302cb17cdc01c85e5cb2dd307341c96b9149561fe37494b3759a9f51c70b1b6d6013ed4ca",
+          "sha256": "4c312618384513d162c59e6f068831c4a04775ab6ae5959cac6082ef0ca4162d",
+          "sha1": "d514203832ae26c9cd58c0ac9c011ec802140992",
+          "md5": "ba4d18e77e5ad46eeffbafaaf1e0abf7"
         }
       ]
     },
@@ -55,13 +55,13 @@
       ],
       "files": [
         {
-          "name": "random_names_generator-1.8.jar",
-          "url": "random_names_generator-1.8.jar",
-          "size": 803282,
-          "sha512": "7c4110b01aa0745e55377f60e1faaf26280fc6ea606d34fcabba8db559d6c7ed93c2537314209cae54d96e48ab67cd6d1d2d1f2a1dcf2211290be04b8e14fe31",
-          "sha256": "ce49ebcf094439136e0879de4f1ec0d837fae498b590f9f017404f391b717814",
-          "sha1": "59e8ca7e00aa493a063b317899d1cb2e473036ba",
-          "md5": "68e758f155f3c89cc39b9f0f80207980"
+          "name": "random_names_generator-1.9.jar",
+          "url": "random_names_generator-1.9.jar",
+          "size": 803351,
+          "sha512": "7fe07f19cae3c99a535c33b475a0214bd074c518c497905f680a23b302cb17cdc01c85e5cb2dd307341c96b9149561fe37494b3759a9f51c70b1b6d6013ed4ca",
+          "sha256": "4c312618384513d162c59e6f068831c4a04775ab6ae5959cac6082ef0ca4162d",
+          "sha1": "d514203832ae26c9cd58c0ac9c011ec802140992",
+          "md5": "ba4d18e77e5ad46eeffbafaaf1e0abf7"
         }
       ]
     }

@@ -1,9 +1,8 @@
-package org.example;
+package me.natkramarz;
 
 
 
-import org.example.StringGenerator;
-import org.example.exception.IncorrectNameLengthException;
+import me.natkramarz.exception.IncorrectNameLengthException;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
