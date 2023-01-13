@@ -1,9 +1,10 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id 'maven-publish'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group = 'me.natkramarz'
+version = '1.8'
 
 repositories {
     mavenCentral()
@@ -17,3 +18,21 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'me.natkramarz'
+            artifactId = 'random_names_generator'
+            version = "1.8"
+            from components.java
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
+
+
+
+

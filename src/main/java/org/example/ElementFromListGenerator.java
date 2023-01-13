@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -16,5 +18,13 @@ public class ElementFromListGenerator<T> {
 
     public T generate() {
         return givenList.get(random.nextInt(givenList.size()));
+    }
+
+    public Iterator<T> pickNRandomElements(int n) {
+        var sublist = new LinkedList<T>();
+        for (int i = 0; i < n; i++) {
+            sublist.add(generate());
+        }
+        return sublist.iterator();
     }
 }
