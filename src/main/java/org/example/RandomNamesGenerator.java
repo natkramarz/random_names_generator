@@ -1,8 +1,6 @@
 package org.example;
 
 
-import org.example.reader.TxtFileReader;
-
 public class RandomNamesGenerator {
 
     private int firstNameMinLength = 5;
@@ -16,40 +14,38 @@ public class RandomNamesGenerator {
     private int randomStringMinLength = 5;
     private int randomStringMaxLength = 50;
 
-    private FromFileGenerator generator;
-    private String firstNameFileName = "first_names.txt";
-    private String lastNameFileName = "last_names.txt";
-    private String cityNameFileName = "city_names.txt";
-    private String streetNameFileName = "street_names.txt";
-
-    FromRandomClassGenerator fromRandomClassGenerator;
+    Generators<FromFileGenerator, FromFileGenerator, FromFileGenerator, FromFileGenerator, FromRandomClassGenerator>
+            generators = new Generators(
+                    new FromFileGenerator("first_names.txt"),
+                    new FromFileGenerator("last_names.txt"),
+                    new FromFileGenerator("city_names.txt"),
+                    new FromFileGenerator("street_names.txt"),
+                    new FromRandomClassGenerator()
+            );
 
 
     public RandomNamesGenerator() {
-        this.generator = new FromFileGenerator(new TxtFileReader());
-        this.fromRandomClassGenerator = new FromRandomClassGenerator();
-
     }
 
 
     public String getFirstName() {
-        return generator.generate(firstNameFileName, firstNameMinLength, firstNameMaxLength);
+        return generators.getFirstNameGenerator().generate(firstNameMinLength, firstNameMaxLength);
     }
 
     public String getLastName() {
-        return generator.generate(lastNameFileName, lastNameMinLength, lastNameMaxLength);
+        return generators.getLastNameGenerator().generate( lastNameMinLength, lastNameMaxLength);
     }
 
     public String getString() {
-        return fromRandomClassGenerator.generate(randomStringMinLength, randomStringMaxLength);
+        return generators.getStringGenerator().generate(randomStringMinLength, randomStringMaxLength);
     }
 
     public String getStreetName() {
-        return generator.generate(streetNameFileName, streetNameMinLength, streetNameMaxLength);
+        return generators.getStreetNameGenerator().generate(streetNameMinLength, streetNameMaxLength);
     }
 
     public String getCityName() {
-        return generator.generate(cityNameFileName, cityNameMinLength, cityNameMaxLength);
+        return generators.getCityNameGenerator().generate(cityNameMinLength, cityNameMaxLength);
     }
 
     void setFirstNameMinLength(int firstNameMinLength) {
@@ -92,4 +88,11 @@ public class RandomNamesGenerator {
         this.randomStringMaxLength = randomStringMaxLength;
     }
 
+    public int getFirstNameMinLength() {
+        return firstNameMinLength;
+    }
+
+    public int getFirstNameMaxLength() {
+        return firstNameMaxLength;
+    }
 }

@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Random;
 
-public class FromRandomClassGenerator {
+class FromRandomClassGenerator implements StringGenerator {
 
     private final Random random;
 
