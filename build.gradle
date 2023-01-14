@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'me.natkramarz'
-version = '1.9'
+version = '2.0'
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'me.natkramarz'
             artifactId = 'random_names_generator'
-            version = "1.9"
+            version = "2.0"
             from components.java
         }
     }

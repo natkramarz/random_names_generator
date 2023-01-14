@@ -11,9 +11,10 @@ public class RandomNamesGeneratorExtension implements ParameterResolver, TestIns
 
     @Override
     public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) throws ParameterResolutionException {
-        var randomNamesGenerator = new RandomNamesGenerator();
-        randomNamesGenerator.setFirstNameMinLength(parameterContext.getParameter().getAnnotation(NameLengths.class).firstNameMinLength());
-        return randomNamesGenerator;
+        var generator = new RandomNamesGenerator();
+        var lengths = parameterContext.getParameter().getAnnotation(NameLengths.class);
+        setNameLengths(generator, lengths);
+        return generator;
     }
 
     @Override
@@ -30,7 +31,7 @@ public class RandomNamesGeneratorExtension implements ParameterResolver, TestIns
         }
     }
 
-    private void setNameLengths(RandomNamesGenerator generator, NameLengths lengths) throws Exception {
+    private void setNameLengths(RandomNamesGenerator generator, NameLengths lengths) {
         if (lengths.firstNameMinLength() <= 0 || lengths.firstNameMaxLength() <= 0 ||
                 lengths.lastNameMinLength() <= 0 || lengths.lastNameMaxLength() <= 0 ||
                 lengths.cityNameMinLength() <= 0 || lengths.cityNameMaxLength() <= 0 ||
@@ -73,4 +74,5 @@ public class RandomNamesGeneratorExtension implements ParameterResolver, TestIns
         generator.setRandomStringMaxLength( lengths.randomStringMaxLength());
 
     }
+
 }
