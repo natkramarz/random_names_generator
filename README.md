@@ -50,4 +50,4 @@ public class RandomNamesGeneratorTest {
 1) Clone this repository. 
 2) Build the project with Gradle using Intellij IDEA. 
 3) In `Gradle` Tool Window expand `random_names_generator/Tasks/publishing` and run `publishToMavenLocal` task
-4) From now on you can use the random names generator in your applications by adding `implementation 'me.natkramarz:random_names_generator:1.8'` to dependencies of their `gradle.build` file.
+4) From now on you can use the random names generator in your applications by adding `implementation 'me.natkramarz:random_names_generator:2.0'` to dependencies of their `gradle.build` file.
